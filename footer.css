@@ -1,0 +1,149 @@
+/* Footer Styles */
+footer {
+    background-color: #212121; /* Dark background */
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden; /* Hide animations outside */
+    text-align: center;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+    animation: slide-up 0.8s ease-in-out;
+}
+
+.footer-column h5 {
+    color: orange; /* Orange headings */
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    animation: fade-in 1.2s ease-in-out;
+}
+
+.footer-column h5::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: orange;
+    margin: 8px auto 0;
+    transition: width 0.4s ease;
+}
+
+.footer-column h5:hover::after {
+    width: 100%; /* Underline effect on hover */
+}
+
+.footer-column p,
+.footer-column ul {
+    color: white;
+    line-height: 1.6;
+    font-size: 1rem;
+    animation: fade-in 1s ease-in-out;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-column ul li:hover {
+    transform: translateX(5px); /* Subtle shift */
+    color: orange;
+}
+
+.social-icons {
+    margin-top: 15px;
+    animation: pop-in 1s ease-in-out;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+    transform: scale(1.2); /* Pop-out effect */
+    box-shadow: 0 0 10px orange; /* Glowing effect */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: rotate(360deg); /* Rotate effect */
+}
+
+/* Animations */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-column h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer-column p,
+    .footer-column ul {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}

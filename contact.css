@@ -1,0 +1,257 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fade-in 1s ease-in-out; /* Page fade-in effect */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffa500; /* Orange background */
+    padding: 15px;
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #121212;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    animation: slide-in-left 0.8s ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: #121212;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Underline Animation */
+.navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Navbar Toggler Animation */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg);
+}
+
+/* Contact Form Styling */
+.contact-container {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    animation: slide-up 0.8s ease-in-out;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: orange;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #2d2d2d;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: orange;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+    outline: none;
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+.contact-form button {
+    background-color: orange;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    animation: bounce-in 1s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: darkorange;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-align: center;
+    position: relative;
+    animation: slide-up 1s ease-in-out;
+}
+
+footer h5 {
+    color: orange;
+    margin-bottom: 15px;
+    animation: fade-in 1.2s ease-in-out;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+.social-icons a i {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a i:hover {
+    color: orange;
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Individual Brand Colors */
+.social-icons a.instagram i {
+    color: #E4405F; /* Instagram Pink */
+}
+
+.social-icons a.facebook i {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a.linkedin i {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.social-icons a.youtube i {
+    color: #FF0000; /* YouTube Red */
+}
+
+/* Hover Effects with White Glow */
+.social-icons a:hover i {
+    color: #ffffff; /* Change icon to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
+    transform: scale(1.2) rotate(10deg); /* Slight zoom and rotation */
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}

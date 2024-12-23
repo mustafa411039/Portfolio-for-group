@@ -1,0 +1,248 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffa500; /* Orange background */
+    padding: 15px;
+    transition: background-color 0.5s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+  }
+  
+  .navbar:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    color: #121212; /* Black color */
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-link {
+    color: #121212; /* Black color */
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth hover effect */
+  }
+  
+  /* Underline Animation */
+  .navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* White underline */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover::before {
+    width: 100%; /* Full underline on hover */
+    left: 0;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* Navbar Toggler Animation */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotate toggle button on hover */
+  }
+  
+  /* Active Link Styling */
+  .navbar .nav-link.active {
+    color: #ffffff; /* White color for active link */
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+/* Services Section */
+.services {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #f57c00;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #f57c00;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.service-box {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-box .icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.service-box h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-box p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #f57c00;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer ul {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+/* footer .social-icons a {
+    color: #f57c00;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+} */
+
+footer .social-icons a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services .service-box {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .social-icons a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+/* Social Media Section Styling */
+/* .social-icons {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    font-size: 1.1rem;
+    color: #ffffff; 
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+} */
+
+.social-icons a i {
+    font-size: 1.5rem; /* Make icons larger */
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+/* Brand Colors for Social Media Icons */
+.social-icons a.instagram i {
+    color: #E4405F; /* Instagram Pink */
+}
+
+.social-icons a.facebook i {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a.linkedin i {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.social-icons a.youtube i {
+    color: #FF0000; /* YouTube Red */
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+    color: #ffa500; /* Orange text on hover */
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2); /* Slight icon zoom on hover */
+}

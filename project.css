@@ -1,0 +1,230 @@
+/* General Body Styling */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Added a font-family for consistency */
+}
+
+/* Text Styles */
+.text-orange {
+    color: #FFA500;
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #1a1a1a;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px; /* Smooth edges */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Lift and scale effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for emphasis */
+}
+
+/* Image Zoom Effect */
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+/* Overlay Animation */
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+}
+
+.project-card:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Text and Title Animation */
+.project-card .card-body {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: #fff; /* White text */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-title {
+    transform: translateY(-10px); /* Move title upwards */
+    color: #ffa500; /* Orange for emphasis */
+}
+
+.project-card .card-body p {
+    opacity: 0.8;
+    font-size: 1rem;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-card:hover .card-body p {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Glow Effect on Hover */
+.project-card:hover {
+    box-shadow: 0 0 15px #ffa500, 0 0 25px #ffa500; /* Orange glowing effect */
+}
+
+
+/* Navbar Styles */
+/* Navbar */
+.navbar {
+    background-color: #ffa500; /* Orange background */
+    padding: 15px;
+    transition: background-color 0.5s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+  }
+  
+  .navbar:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    color: #121212; /* Black color */
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-link {
+    color: #121212; /* Black color */
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth hover effect */
+  }
+  
+  /* Underline Animation */
+  .navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* White underline */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover::before {
+    width: 100%; /* Full underline on hover */
+    left: 0;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* Navbar Toggler Animation */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotate toggle button on hover */
+  }
+  
+  /* Active Link Styling */
+  .navbar .nav-link.active {
+    color: #ffffff; /* White color for active link */
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+/* Colorful Social Media Icons */
+.social-icons a i {
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Ensures proper animation alignment */
+}
+
+/* Individual Social Icon Colors */
+.social-icons a.instagram i {
+    color: #E4405F; /* Instagram Pink */
+}
+
+.social-icons a.facebook i {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a.linkedin i {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.social-icons a.youtube i {
+    color: #FF0000; /* YouTube Red */
+}
+
+/* Hover Effects: Scale, Rotate, and Glow */
+.social-icons a i:hover {
+    transform: scale(1.2) rotate(10deg); /* Scale up and rotate */
+    box-shadow: 0 0 8px currentColor; /* Add a glow matching the icon color */
+    color: #ffffff; /* White text on hover (optional) */
+}
+
+/* Add Bounce Effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px); /* Bounce upward */
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+.social-icons a i:hover {
+    animation: bounce 1s ease infinite; /* Bounce animation */
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .social-icons a i {
+        font-size: 1.5rem; /* Smaller icons for mobile screens */
+    }
+}
+
